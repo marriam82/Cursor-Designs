@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <style>
+                    *{
+                        cursor:grabbing;
+                         font-family: 'Squada One', cursive;
+                    }
+                    .cursor{
+                        height: 4vh;
+                        width: 5%;
+                        color: mintcream;
+                        border-radius:5px ;
+                        position: absolute;
+                        /* -webkit-box-reflect: below 5px linear-gradient(transparent, white); */
+                        box-shadow: 0px 0px 50px 1px black;
+                        letter-spacing: 2px;
+                        text-align: center;
+                       
+                    }
+                    body{
+                        background-color: midnightblue;
+                    }
+                </style>
+                <div class="cursor"><b>Cursor</b></div>
+</body>
+<script src="./jquery-3.4.1.min.js"></script>
+    <script>
+$(window).on('mousemove',function(e){
+    var xffset = e.pageX+15;
+    var yoffset = e.pageY+15;
+
+    $('.cursor').animate({left:xffset,top:yoffset},15)
+})
+    </script>
+</html>

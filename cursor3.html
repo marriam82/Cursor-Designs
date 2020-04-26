@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<style>
+          *{
+                    cursor:grab;
+          }
+          body{
+                    background-color: hotpink;
+          }
+          .cursor{
+                    height: 4vh;
+                    width: 7%;
+                    color:white;
+                    border-radius:10px ;
+                    position: absolute;
+                    box-shadow: 0px 0px 50px 1px white;
+                    letter-spacing: 2px;
+                    text-align: center;
+          }
+</style>
+<body>
+          <div class="cursor"><b>Cursor</b></div>
+</body>
+<script src="./jquery-3.4.1.min.js"></script>
+<script>
+     $(window).on('mousemove',function(e){
+               var xleft = e.pageX+25;
+               var ytop  =  e.pageY+25;
+
+     $('.cursor').animate({left:xleft,top:ytop},15)
+          })
+</script>
+</html>

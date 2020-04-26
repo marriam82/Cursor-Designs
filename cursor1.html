@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+         <style>
+                   *{
+                             cursor: none;
+                             list-style: none;
+                   }
+                   .cursor{
+                             width: 40px;
+                             height:40px;
+                             border-radius:50%;
+                             background:black;   
+                             position: absolute;
+                             pointer-events: none;
+                             opacity:0;
+                             z-index: 1;
+                   }
+
+                   .child{
+                             width:30px;
+                             height:30px;
+                             border-radius:50%;
+                             background-color: orange;
+                             position: absolute;
+                             pointer-events: none;
+                             opacity: 0;
+                             visibility: hidden;
+
+                   }
+                   .child1{
+                             transition: all 0.1s;
+                   }
+                   .child2{
+                             transition: all 0.2s;
+                             background-color: pink;
+
+                   }
+                   .child3{
+                             transition: all 0.3s;
+                             background-color: rgb(63, 22, 129);
+                   }
+                   .child4{
+                             transition: all 0.4s;
+                             background-color: rgb(190, 202, 24);
+                   }
+                   
+
+
+
+
+         </style>
+          <div class="cursor"></div>
+          <div class="child child1"></div>
+          <div class="child child2"></div>
+          <div class="child child3"></div>
+          <div class="child child4"></div>
+
+
+<script src="./jquery-3.4.1.min.js"></script>
+
+<script>
+      $(window).mousemove(function(e){
+                var horizontal = e.offsetY;
+                var vertical   = e.offsetX;
+                console.log(horizontal,vertical)
+                $('div').css({
+                          top:horizontal,
+                          left:vertical,
+                          visibility:"visible",
+                          opacity:"1",
+                });
+
+
+      });
+</script>
+
+</body>
+</html>
